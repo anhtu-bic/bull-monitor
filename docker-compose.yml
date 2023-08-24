@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  bull-monitoring:
+    image: iamtuuuuuu/bull-monitor:latest
+    environment:
+      APP_PORT: 3010
+      REDIS_HOST: "host.docker.internal"
+      REDIS_PORT: 6376
+      REDIS_PASSWORD: "123456"
+      REDIS_DB: 0
+      QUEUES: "QuizPending"
+      APP_USERNAME: "admin"
+      APP_PASSWORD: "admin"
+    ports:
+      - "3010:3010"
